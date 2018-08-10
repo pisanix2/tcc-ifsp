@@ -1,0 +1,24 @@
+{
+    "api": {
+        "baseurl": "/api",
+        "port": "8080",
+        "route": [
+            {"url": "/posto", "method": "get", "controller": "Posto", "fn": "getPosto"},
+            {"url": "/posto/:id", "method": "get", "controller": "Posto", "fn": "getPostoById"},
+            {"url": "/posto/geocode", "method": "post", "controller": "Posto", "fn": "putPostGeocode"},
+            {"url": "/posto/:id/preco", "method": "put", "controller": "Preco", "fn": "putPrecoByPosto"}
+        ]
+    },
+    "db": {
+        "host": "localhost",
+        "port": "27017",
+        "database": "tcc-ifsp",
+        "user": "",
+        "password": ""
+    },
+    "geocoder": {
+        "provider": "google",
+        "httpAdapter": "https",
+        "apiKey": "AIzaSyABurYlYAnijRkAMPImVHNKfOepU4ZxMWA"
+    }
+}
